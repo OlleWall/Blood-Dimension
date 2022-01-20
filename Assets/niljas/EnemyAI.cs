@@ -14,12 +14,15 @@ public class EnemyAI : MonoBehaviour
     Vector2 playerDirection;
 
     AIDestinationSetter setter;
+
+    AudioManager manager;
     
 
     // Start is called before the first frame update
     void Start()
     {
         setter = GetComponent<AIDestinationSetter>();
+        manager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -36,6 +39,8 @@ public class EnemyAI : MonoBehaviour
         if (hit.transform != null && hit.distance < 10 && hit.collider.gameObject.tag == "Player")
         {
             setter.target = hit.transform;
+            manager.Play("Chase");
+            print("Played audio and raycast got close enough");
         } 
         else if (Vector3.Distance(transform.position, hit.transform.position) > 10)
         {
@@ -44,6 +49,13 @@ public class EnemyAI : MonoBehaviour
         else if (Vector3.Distance(transform.position, patrolNode.transform.position) < 1)
         {          
             Patrol();
+        }
+        
+        
+        if(hit.transform != null && hit.distance > 10 && hit.collider.gameObject.tag == "Player")
+        {
+            manager.Stop("Chase");
+            print("stopped chase audio");
         }
     }
 
