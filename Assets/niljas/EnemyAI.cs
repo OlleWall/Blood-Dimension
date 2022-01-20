@@ -32,12 +32,10 @@ public class EnemyAI : MonoBehaviour
             );
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, playerDirection);
-        Debug.DrawRay(transform.position, playerDirection);
-        print(hit.transform.name + hit.transform.position);
+
         if (hit.transform != null && hit.distance < 10 && hit.collider.gameObject.tag == "Player")
         {
             setter.target = hit.transform;
-            print("wow");
         } 
         else if (Vector3.Distance(transform.position, hit.transform.position) > 10)
         {
