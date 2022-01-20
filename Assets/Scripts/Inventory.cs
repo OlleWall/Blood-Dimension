@@ -11,9 +11,9 @@ public class Inventory : MonoBehaviour
         score = FindObjectOfType<Score>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Candle")
+        if (collision.gameObject.tag == "Candle" && Input.GetKeyDown(KeyCode.E))
         {
             Destroy(collision.gameObject);
             score.PlayerScore += 1;

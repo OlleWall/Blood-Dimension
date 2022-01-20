@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Patrol
   - Candle
+  - Enemy
   layers:
   - Default
   - TransparentFX

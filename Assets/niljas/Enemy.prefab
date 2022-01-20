@@ -70,9 +70,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.5377358, g: 0.023673853, b: 0.023673853, a: 1}
+  m_Color: {r: 0.3962264, g: 0.15948732, b: 0.15948732, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8411015398809468972}
   - component: {fileID: 8411015398809468970}
+  - component: {fileID: 8820228065706349032}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -164,6 +165,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
   m_SpriteSortPoint: 0
+--- !u!61 &8820228065706349032
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411015398809468973}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.9, y: 2.22}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9, y: 2.22}
+  m_EdgeRadius: 0
 --- !u!1 &8411015399392748683
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +284,7 @@ MonoBehaviour:
   enableRotation: 0
   autoRepath:
     mode: 1
-    interval: 1
+    interval: 0.2
     sensitivity: 10
     maximumInterval: 2
     visualizeSensitivity: 0
@@ -299,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezb3LbzcQIAACwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzk3GBkNCby0hpIckTGgnF18Wa401yJJHkgMkw3/vSraxS0+I9/bj7dPKX0woW2HmtFkZwZ81R/Z9xPyZfRv15BMeYafVRnxiF/MuuCt8EISYN3BCEx77NKtLdEZkP9RO+uCIwFqJXJtyyXe40NZZgnOQFoky2vlsRdDXiB3p52buU050Gt/50yed5tHoTMcMlUMzCI1uo/t5NI1nUTJpkzw2ncXJJEqmSZveZNcqk1BWyP0ofZF42vWLoyZQ0ZhtjB8p01IK22pk7lQFDzZVgQa9CVwAjRx0xbdTAgoUu8L5AYbZr3lu0bWOGDg9CEPeNWXZT90YWoLdN9I+QNa+0SwJmpqaz//RN3Ggc6PLp64tzUGQK0S2f4NTBtYNDB/CDwPlwaADyD1sJb4XqF70yuhacSKdqX1qbXH80P+9TLYoMNv3eCP1Cqyr3vHO7+52/QznMPxxIUW59dRt0gAbqYPfYSnQ0M38IsFhZWxbglCv4o/F37Ab7lZLPApjHVHtlMrL2+ra+FC2DJ75aWq30EZhgFvRFSqQ7rSmMu76Bq+4Qdsr5hH8K2qbt1z3OK5SAtzHR9EVtdaHy2XZQh+e0RavtZNCYS/aEy/k00Ir1SzY0JMubVObHLJB2q4W/N/VYuPthM/hPornGMXA+U0CCWIcJxDh7A4m9yzsnlA0J8h1I7S1h25N9cUV7Vn3cRmtDFRh2bmBw0p8lnpguVC53mQGUb02FS7C0VATepV8yQUZtEHnhAr3zb5SJnW2R55eCqVh0uXRGUj7KimrxId2HknZInxNUubhyy6vDX4IPPjmXbEzO/8FUEsDBBQAAAgIAAAIIezQyrJYbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSUZJximWihYGhZaqBYWJKiq5JoklqqqGhSaJBqpl5orGFUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezb3LbzcQIAACwFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIezQyrJYbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIeyQiWaobgIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzk3GJiZAby0hpIckTGgnF18Wa401yJJHkgMkw3+vVraxS0+I9/bj7dPKX0woW2HmtFkZwZ81R/Z9xOjMvo168gmPsNNqIz6xi3kX3BUUBCHmDZzQHo8pzeoSnRHZD7WTFBx5sFYi16Zc8h0utHXWwzlIi54y2lG28tDXiB39z82cUk7+NJ7S6dOf5tHo7I8ZKodmEBrdRrN5NJkmyWTSJhE2uY+TJJlO5m16k12rTEJZIadR+iKXdrMmTPkh2wgaKNNSCtsqZO5UBQc2VYEGyQIuwA8cVMW3JKJAsSscyR9mv+a5Rdf6YeD0IIx3rinLfurGzhLsvhH2AbKmRvdJ0NTUfP6PvokDnRtdPnVt44hauEJk+zc4ZWDdwO4h/DBQHuw5gNzDVuJ7gepFr4yuFfekMzWl1hbHD/3fy2SLArN9jzdSr8C66v3u7O7ulmY4h+GPCynKLVG3SQNspA5+hztC42/mlxccFsa2JTxKKv5Y/A274Wa1xKMw1nmqnVKRvK2uDYWyZfCMpqndQhuFAW5FV6hAutPal3HXN3jFDdpeMY9Ab6ht3nLd07hKCXAfH0VX1FofLpdlC314Rlu81k4Khb1oIl68TwutVLNgQ0+6tE1tcsgGabta8H9Xi423d3wOsyieYxQD5zcJJIhxnECE91O4m7Gwe0L5OUGuG6GtPf7WVF9c+T3rPi2jlYEqLDs3cFiJz1IPLBcq15vMIKrXpsJFOBrfxL9KvuTCG7RB54QK982+UiZ1tkeeXgqlYdLl0RlI+yopq8SHdoSkbBG+JSkj+LLLa4MfAg/UvCt2Zue/UEsDBBQAAAgIAAAIIezQyrJYbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSUZJximWihYGhZaqBYWJKiq5JoklqqqGhSaJBqpl5orGFUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIeyQiWaobgIAACoFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIezQyrJYbQAAAHgAAAAJACQAAAAAAAAAAAAAALsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAcwMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -387,3 +414,4 @@ MonoBehaviour:
   areaSize: 30
   player: {fileID: 0}
   patrolNode: {fileID: 0}
+  flashLight: {fileID: 0}
