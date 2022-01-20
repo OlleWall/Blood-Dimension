@@ -11,6 +11,8 @@ public class playerMover : MonoBehaviour
 
     public SpriteMask flashLight;
 
+    Score score;
+
     // Update is called once per frame
     void Update()
     {

@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public int candles;
+    Score score;
+
+    private void Start()
+    {
+        score = FindObjectOfType<Score>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Candle")
         {
             Destroy(collision.gameObject);
-            candles++;
+            score.PlayerScore += 1;
+            
         }
     }
 }
