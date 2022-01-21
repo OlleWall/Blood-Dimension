@@ -8,6 +8,14 @@ public class Pentagram : MonoBehaviour
 
     Score score;
 
+    int lights = 0;
+
+    public SpriteRenderer ljus1;
+    public SpriteRenderer ljus2;
+    public SpriteRenderer ljus3;
+    public SpriteRenderer ljus4;
+    public SpriteRenderer ljus5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +28,33 @@ public class Pentagram : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && score.PlayerScore >= 5)
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && score.PlayerScore > lights)
         {
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            /*Light(ljus1, 1);
+            Light(ljus2, 2);
+            Light(ljus3, 3);
+            Light(ljus4, 4);
+            Light(ljus5, 5);*/
+            if (Light(ljus1, 1) && Light(ljus2, 2) && Light(ljus3, 3) && Light(ljus4, 4) && Light(ljus5, 5))
+            {
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            }
+        }
+    }
+
+    bool Light(SpriteRenderer light, int neededScore)
+    {
+        if (score.PlayerScore >= neededScore)
+        {
+            light.enabled = true;
+            return true;
+        }
+        else
+        {
+            light.enabled = false;
+            return false;
         }
     }
 }
