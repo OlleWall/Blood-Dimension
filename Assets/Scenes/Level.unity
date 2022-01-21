@@ -410,7 +410,7 @@ PrefabInstance:
       objectReference: {fileID: 1844080975}
     - target: {fileID: 1490925067, guid: 691345ee5896ea04db09c089bc6a3107, type: 3}
       propertyPath: m_Color.a
-      value: 0.8627451
+      value: 0.8039216
       objectReference: {fileID: 0}
     - target: {fileID: 1490925067, guid: 691345ee5896ea04db09c089bc6a3107, type: 3}
       propertyPath: m_Enabled
@@ -2995,6 +2995,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8411015398809468970, guid: 2e49a0f196561994fa4d8ed35eb32b1a, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8411015398809468973, guid: 2e49a0f196561994fa4d8ed35eb32b1a, type: 3}
       propertyPath: m_Layer
       value: 2
@@ -67908,7 +67912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844080975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 29.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
