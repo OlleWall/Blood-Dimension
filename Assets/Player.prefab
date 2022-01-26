@@ -173,11 +173,11 @@ GameObject:
   m_Component:
   - component: {fileID: 193857074659984797}
   - component: {fileID: 193857074659984798}
-  - component: {fileID: 193857074659984799}
-  - component: {fileID: 960375862}
   - component: {fileID: 1314140207}
   - component: {fileID: 1111461708}
+  - component: {fileID: 960375862}
   - component: {fileID: 1111461703}
+  - component: {fileID: 4729935508865982575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -253,34 +253,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &193857074659984799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193857074659984784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8894216efe89564386ee7a660f91bf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  facing: {x: 0, y: 0}
-  flashLight: {fileID: 193857073017252850}
---- !u!114 &960375862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193857074659984784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d208f320caa3bc4aadb601ec8f75772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraGO: {fileID: 0}
 --- !u!61 &1314140207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,6 +300,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &960375862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193857074659984784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d208f320caa3bc4aadb601ec8f75772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraGO: {fileID: 0}
 --- !u!114 &1111461703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +325,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a7190a2c1c9f44b94bbfc58103611c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4729935508865982575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193857074659984784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8894216efe89564386ee7a660f91bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  facing: {x: 0, y: 0}
+  moveDirection: {x: 0, y: 0}
+  flashLight: {fileID: 193857073017252850}
 --- !u!1 &5274032542158099461
 GameObject:
   m_ObjectHideFlags: 0

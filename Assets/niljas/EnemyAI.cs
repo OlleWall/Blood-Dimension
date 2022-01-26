@@ -71,7 +71,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void Patrol()
+    public void Patrol()
     {
         min = player.transform.position - new Vector3(-areaSize, -areaSize, 0);
         max = player.transform.position - new Vector3(areaSize, areaSize, 0);

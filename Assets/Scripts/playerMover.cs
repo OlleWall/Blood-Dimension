@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class playerMover : MonoBehaviour
+public class PlayerMover : MonoBehaviour
 {
     [SerializeField, Range(1, 50)]
     float speed = 5;
 
     public Vector2 facing;
 
+    public Vector2 moveDirection;
+
     public SpriteMask flashLight;
 
-    Score score;
+    Rigidbody2D rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -20,33 +28,37 @@ public class playerMover : MonoBehaviour
         //player movment -Olle
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
+            moveDirection.y = 1;
             facing.y = 1;
         } 
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= new Vector3(0, speed, 0) * Time.deltaTime;
+            moveDirection.y = -1;
             facing.y = -1;
         }
         else
         {
+            moveDirection.y = 0;
             facing.y = 0;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+            moveDirection.x = 1;
             facing.x = 1;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= new Vector3(speed, 0, 0) * Time.deltaTime;
+            moveDirection.x = -1;
             facing.x = -1;
         }
         else
         {
+            moveDirection.x = 0;
             facing.x = 0;
         }
+
+        Move(moveDirection);
 
         //när ctrl trycks ner pekar objektet musen
         if (Input.GetKey(KeyCode.LeftControl))
@@ -82,12 +94,19 @@ public class playerMover : MonoBehaviour
         }
     }
 
+    void Move(Vector2 vector)
+    {
+        rb.velocity = vector.normalized * speed;
+    }
+
+    void Death()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
-        }
+        Death();
     }
 }
 
