@@ -7,6 +7,10 @@ public class SpriteDepth : MonoBehaviour
 
     public Transform player;
 
+
+    [SerializeField, Range(0, 5)]
+    private float offset;
+
     SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
@@ -18,7 +22,7 @@ public class SpriteDepth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.y > transform.position.y - 1.4f)
+        if (player.position.y > transform.position.y - offset)
         {
             spriteRenderer.sortingOrder = 3;
         }
