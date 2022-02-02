@@ -101,12 +101,15 @@ public class PlayerMover : MonoBehaviour
 
     void Death()
     {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+        SceneManager.LoadScene("DeathMenu", LoadSceneMode.Single);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Death();
+        if (collision.gameObject.tag == "Enemy")
+        {
+           Death();
+        }       
     }
 }
 

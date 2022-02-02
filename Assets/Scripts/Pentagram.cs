@@ -32,14 +32,9 @@ public class Pentagram : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && score.PlayerScore > lights)
         {
-            /*Light(ljus1, 1);
-            Light(ljus2, 2);
-            Light(ljus3, 3);
-            Light(ljus4, 4);
-            Light(ljus5, 5);*/
             if (Light(ljus1, 1) && Light(ljus2, 2) && Light(ljus3, 3) && Light(ljus4, 4) && Light(ljus5, 5))
             {
-                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+                SceneManager.LoadScene("playagain", LoadSceneMode.Single);
             }
         }
     }
