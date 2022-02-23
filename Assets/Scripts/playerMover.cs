@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Olle
-public class PlayerMover : MonoBehaviour
+public class playerMover : MonoBehaviour
 {
     [SerializeField, Range(1, 50)]
     float speed = 5;
