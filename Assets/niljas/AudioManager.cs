@@ -2,8 +2,10 @@ using UnityEngine.Audio;
 using UnityEngine;
 using System;
 
+
 public class AudioManager : MonoBehaviour
 {
+   //Niljas
     public Sound[] sounds;
 
     void Awake()
