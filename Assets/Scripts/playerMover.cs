@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Olle
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField, Range(1, 50)]
@@ -25,7 +26,7 @@ public class PlayerMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //player movment -Olle
+        //updaterar vilket håll spelarn går och kollar
         if (Input.GetKey(KeyCode.W))
         {
             moveDirection.y = 1;
@@ -60,7 +61,7 @@ public class PlayerMover : MonoBehaviour
 
         Move(moveDirection);
 
-        //när ctrl trycks ner pekar objektet musen
+        //när ctrl trycks ner pekar spelarn musen
         if (Input.GetKey(KeyCode.LeftControl))
         {
             //skapar en vector3 med musens kordinater -Olle
@@ -106,6 +107,7 @@ public class PlayerMover : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //när spelaren nuddar monstret så dör man
         if (collision.gameObject.tag == "Enemy")
         {
            Death();
