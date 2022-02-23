@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour {
     public void PlayGame ()
     {
         //Det här gör så att man blir förflyttad till leveln med play knappen. - Elsa
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Level");
     }
     
     public void QuitGame ()
